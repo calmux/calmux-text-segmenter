@@ -2,4 +2,4 @@
 
 ## Security
 
-Microsoft takes the secu
+Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include 
