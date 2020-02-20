@@ -10,4 +10,6 @@ If you believe you have found a security vulnerability in any Microsoft-owned re
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them to the Microsoft Security Response Center (MSRC) at [https:/
+Instead, please report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://msrc.microsoft.com/create-report).
+
+If you prefer to submit without logging in, send email to [secure@microsoft.com](ma
