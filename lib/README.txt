@@ -4,4 +4,5 @@ FactoredSegmenter sources in the src/ directory.
 The standalone command-line tool build uses these libraries here.
 
 The production build uses a different version of this library, which is
-i
+included in our production environment, and is proprietary. The files in this
+directory contain a subset of those production libr
