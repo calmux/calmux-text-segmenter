@@ -132,3 +132,73 @@ int EXPORT UCS2LengthOfPieceId(intptr_t object, int pieceId)
 }
 
 void EXPORT UnloadModel(intptr_t object)
+{
+    delete (SentencePieceInterop*)object;
+}
+
+}
+
+// ---------------------------------------------------------------------------
+// BELOW IS MY DEV WRAPPER
+// ---------------------------------------------------------------------------
+
+// how to build:
+//  - clang -lstdc++ -std=c++11 -lsentencepiece -Wall -Werror SentencePieceInterop.cpp
+// how the SPM files for testing were obtained:
+//  - run factored-segmenter encode --model /marcinjdeu.blob.core.windows.net/forfrank/model-99995c.fsm
+//  - you will see a log msg like this:
+//    starting SentencePiece instance as: /usr/local/bin/spm_encode --model /tmp/tmpg9BX8N.tmp --vocabulary /tmp/tmpFslYfv.tmp
+//  - copy out the --model and --vocab temp files
+
+using namespace std;
+
+const char* spmModelPath = "/home/fseide/factored-segmenter/spm/spm.model";
+const char* spmVocabPath = "/home/fseide/factored-segmenter/spm/spm.vocab";
+
+//vector<string> test_strings =
+//{
+//    "\u2581HELLO",
+//    "\u2581OBAMA",
+//    "OBAMA",
+//    "HELL\u2582\u2582O"  // out-of-vocab example
+//};
+
+void fail(const char* msg) { cerr << "FAILED: " << msg << endl; exit(1); }
+
+int main()
+{
+    // load the model file into RAM
+    ifstream f_model(spmModelPath);
+    auto modelBytes = vector<char>(istreambuf_iterator<char>(f_model), istreambuf_iterator<char>());
+    if (f_model.bad() || modelBytes.empty())  // note: bad bit does not get set if file not found (??)
+        fail("Failed to read SPM model file.");
+
+    // load the vocab file
+    ifstream f_vocab(spmVocabPath);
+    vector<string> vocab;
+    while (f_vocab)
+    {
+        string line;
+        getline(f_vocab, line);
+        vocab.push_back(line);
+    }
+    //vector<const uint16_t*> vocab_ptr;
+    //for (const auto& line : vocab)
+    //    vocab_ptr.push_back(line.c_str());
+
+    //auto object = LoadModel(spmModelPath, vocab_ptr.data(), vocab_ptr.size());
+
+    //for (const auto& test_string : test_strings)
+    //{
+    //    cerr << "Testing: " << test_string << endl;
+    //    vector<int> piece_ids(test_string.size() + 1);
+    //    auto num_pieces = EncodeAsIds(object, test_string.c_str(), piece_ids.data(), piece_ids.size());
+    //    if (num_pieces < 0)
+    //        fail("Failed to EncodeAsIds.");
+    //    piece_ids.resize(num_pieces);
+    //    for (auto piece_id : piece_ids)
+    //        cerr << " piece id " << piece_id << " has " << UCS2LengthOfPieceId(object, piece_id) << " UCS-2 characters" << endl;
+    //}
+    //UnloadModel(object);
+    cerr << "Done." << endl;
+}
