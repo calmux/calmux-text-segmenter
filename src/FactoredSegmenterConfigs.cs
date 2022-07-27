@@ -160,3 +160,13 @@ namespace Microsoft.MT.Common.Tokenization
 
         // for debugging:
         public int CheckEvery { get; set; } = 100; // decode each N-th encoded sentence and verify against source
+    }
+
+    /// <summary>
+    /// Class to hold all parameters for the FactoredSegmenter decoding tool.
+    /// </summary>
+    public class FactoredSegmenterDecodeConfig : SegmenterDecodeConfigBase, IFactoredSegmenterConfig
+    {
+        SentencePieceDecodeConfig SentencePieceDecodeConfig { get; set; } // for the underlying SentencePiece module
+    }
+}
