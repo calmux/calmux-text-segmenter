@@ -297,3 +297,46 @@ namespace Common.Text
             // Without further knowledge, we can only make an arbitrary hard choice here.
             // This is used by FactoredSegmenter, where that is OK because characters in Common are
             // typically broken off anyways.
+
+            if (line.Length == 0) // graceful exit in case of empty input
+                return new List<int>{ 0, 0 }; // empty input is not cut
+
+            var cutList = new List<int>(200) { 0 }; // (0=line start, which the resulting cut list must include)
+            var lastNonCommonScript = scripts[0];
+            //if (lastNonCommonScript == Unicode.Script.Hiragana)
+            //    lastNonCommonScript = Unicode.Script.Han; // no boundary between Kanji and Hiragana
+            for (var pos = 1; pos < line.Length; pos++)
+            {
+                // detect change in character designation
+                //  - break at number boundaries
+                //     - add number factor
+                //     - can numbers be part of words that need to be kept together for determining word-level factors?
+                //  - break at word boundaries
+                //     - letter/non-letter transitions
+                //     - don't break apostrophes and hyphens with letters on both sides
+                //     - break at script boundaries
+                bool atDesignationChange = (designations[pos - 1] != designations[pos] &&
+                                            (designations[pos - 1] == 'N' || designations[pos] == 'N' ||
+                                             designations[pos - 1] == 'L' || designations[pos] == 'L'));
+
+                // detect script change
+                var thisScript = scripts[pos];
+                //if (thisScript == Unicode.Script.Hiragana) // the jury is still out whether we should do this or not
+                //    thisScript = Unicode.Script.Han;
+                bool atScriptChange = lastNonCommonScript != thisScript && thisScript != Unicode.Script.Common;
+                // Note: If there is a script change across Common, we choose one arbitrarily.
+                if (thisScript != Unicode.Script.Common || atDesignationChange) // condition 'atDesignationChange' is for back compat only; maybe not needed
+                    lastNonCommonScript = thisScript;
+
+                // add cut point if one was found
+                if (atDesignationChange || atScriptChange)
+                    cutList.Add(pos);
+            }
+            cutList.Add(line.Length);
+            return cutList;
+        }
+        // @TODO: These next two functions should likely be script-dependent (and possibly language-dependent).
+        static bool IsValidPuncInsideWord(char c) => (c == '\'' || c == '-' || c == '\u00AD'/*soft hyphen*/); // true if words may contain this punctuation symbol inside, e.g. "It's", "well-behaved"
+        static bool IsValidPuncInsideNumber(char c) => (c == '.' || c == ',' || c == '\u2009'/*thin space*/); // true if numbers may contain this punctuation symbol inside, e.g. "1,234.56"
+    }
+}
