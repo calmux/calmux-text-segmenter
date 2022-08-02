@@ -13,4 +13,10 @@ namespace Microsoft.MT.Common.Tokenization
     // types for SentencePiece
     public enum SentencePieceModelType
     {
-        [XmlEnum
+        [XmlEnum(Name = "unigram")]
+        Unigram = 0,
+        [XmlEnum(Name = "bpe")]
+        Bpe,
+        [XmlEnum(Name = "word")]
+        Word,
+        [XmlEnu
