@@ -19,4 +19,11 @@ namespace Microsoft.MT.Common.Tokenization
         Bpe,
         [XmlEnum(Name = "word")]
         Word,
-        [XmlEnu
+        [XmlEnum(Name = "char")]
+        Char
+    }
+
+    public enum SentencePieceNormalizationRuleName
+    {
+        [XmlEnum(Name = "nmt_nfkc")]
+     
