@@ -32,4 +32,10 @@ namespace Microsoft.MT.Common.Tokenization
     }
 
     // Note: The following cannot be specified by Flo users, as these are under Flo's control.
-   
+    public enum SentencePieceInputFormat
+    {
+        [XmlEnum(Name = "text")]
+        Text = 0,
+        [XmlEnum(Name = "tsv")]
+        Tsv
+    }
