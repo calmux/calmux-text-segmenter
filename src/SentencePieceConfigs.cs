@@ -39,3 +39,9 @@ namespace Microsoft.MT.Common.Tokenization
         [XmlEnum(Name = "tsv")]
         Tsv
     }
+
+    public enum SentencePieceEncodeFormat
+    {
+        [XmlEnum(Name = "piece")]
+        Piece = 0,
+        [XmlEnum(
