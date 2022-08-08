@@ -26,4 +26,10 @@ namespace Microsoft.MT.Common.Tokenization
     public enum SentencePieceNormalizationRuleName
     {
         [XmlEnum(Name = "nmt_nfkc")]
-     
+        Nfkc = 0,
+        [XmlEnum(Name = "identity")]
+        Identity
+    }
+
+    // Note: The following cannot be specified by Flo users, as these are under Flo's control.
+   
