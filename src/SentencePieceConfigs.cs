@@ -44,4 +44,10 @@ namespace Microsoft.MT.Common.Tokenization
     {
         [XmlEnum(Name = "piece")]
         Piece = 0,
-        [XmlEnum(
+        [XmlEnum(Name = "id")]
+        Id,
+        [XmlEnum(Name = "proto")]
+        Proto,
+        [XmlEnum(Name = "nbest_piece")]
+        NBest_Piece,
+  
