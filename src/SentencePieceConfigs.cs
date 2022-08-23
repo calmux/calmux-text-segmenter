@@ -64,4 +64,9 @@ namespace Microsoft.MT.Common.Tokenization
         Id
     }
 
-    public enum Sent
+    public enum SentencePieceDecodeOutputFormat
+    {
+        [XmlEnum(Name = "string")]
+        String = 0,
+        [XmlEnum(Name = "proto")]
+        Pr
