@@ -56,4 +56,12 @@ namespace Microsoft.MT.Common.Tokenization
         NBest_Proto
     }
 
-    public enum Sentence
+    public enum SentencePieceDecodeInputFormat
+    {
+        [XmlEnum(Name = "piece")]
+        Piece = 0,
+        [XmlEnum(Name = "id")]
+        Id
+    }
+
+    public enum Sent
