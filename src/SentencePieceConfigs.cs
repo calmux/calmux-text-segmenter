@@ -50,4 +50,10 @@ namespace Microsoft.MT.Common.Tokenization
         Proto,
         [XmlEnum(Name = "nbest_piece")]
         NBest_Piece,
-  
+        [XmlEnum(Name = "nbest_id")]
+        NBest_Id,
+        [XmlEnum(Name = "nbest_proto")]
+        NBest_Proto
+    }
+
+    public enum Sentence
