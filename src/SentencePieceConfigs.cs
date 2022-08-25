@@ -69,4 +69,10 @@ namespace Microsoft.MT.Common.Tokenization
         [XmlEnum(Name = "string")]
         String = 0,
         [XmlEnum(Name = "proto")]
-        Pr
+        Proto
+    }
+
+    /// <summary>
+    /// Class to hold all parameters for the SentencePiece training tool.
+    /// </summary>
+    public class Sent
