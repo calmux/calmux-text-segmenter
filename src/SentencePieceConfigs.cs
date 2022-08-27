@@ -75,4 +75,7 @@ namespace Microsoft.MT.Common.Tokenization
     /// <summary>
     /// Class to hold all parameters for the SentencePiece training tool.
     /// </summary>
-    public class Sent
+    public class SentencePieceTrainConfig : SegmenterTrainConfigBase, ISentencePieceConfig
+    {
+        /// <summary>
+        /// comma-separated list of languages this 
