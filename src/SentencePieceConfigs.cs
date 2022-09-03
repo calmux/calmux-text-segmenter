@@ -78,4 +78,8 @@ namespace Microsoft.MT.Common.Tokenization
     public class SentencePieceTrainConfig : SegmenterTrainConfigBase, ISentencePieceConfig
     {
         /// <summary>
-        /// comma-separated list of languages this 
+        /// comma-separated list of languages this model can accept
+        /// </summary>
+        public string AcceptLanguage { get; set; }
+        /// <summary>
+        /// Add dummy whitespace a
