@@ -86,4 +86,5 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public bool? AddDummyPrefix { get; set; }
         /// <summary>
-        /// Override B
+        /// Override BOS (&lt;s&gt;) id. Set -1 to disable BOS ( default: -1 )
+        /// @BUGBUG: BosId, eosId and UnkId should not be user-specifyable, as they ar
