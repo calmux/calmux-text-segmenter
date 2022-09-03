@@ -82,4 +82,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string AcceptLanguage { get; set; }
         /// <summary>
-        /// Add dummy whitespace a
+        /// Add dummy whitespace at the beginning of text ( default: true )
+        /// </summary>
+        public bool? AddDummyPrefix { get; set; }
+        /// <summary>
+        /// Override B
