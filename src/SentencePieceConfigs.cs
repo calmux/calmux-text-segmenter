@@ -95,4 +95,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public double? CharacterCoverage { get; set; }
         /// <summary>
-        /
+        /// Comma separated list of control symbols
+        /// </summary>
+        public string ControlSymbols { get; set; }
+        /// <summary>
+        /// Override
