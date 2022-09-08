@@ -91,4 +91,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32 BosId { get; set; } = -1;
         /// <summary>
-        /// Character coverage to
+        /// Character coverage to determine the minimum symbols ( default: 0.9995 )
+        /// </summary>
+        public double? CharacterCoverage { get; set; }
+        /// <summary>
+        /
