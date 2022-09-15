@@ -104,4 +104,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32 EosId { get; set; } = 0;
         /// <summary>
-        /// If set to false,
+        /// If set to false, --vocab_size is considered as a soft limit. ( default: true )
+        /// </summary>
+        public bool? HardVocabLimit { get; set; 
