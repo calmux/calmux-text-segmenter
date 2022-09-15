@@ -114,4 +114,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Input format. Supported format is 'text' or 'tsv'. ( default: 'text' )
         /// </summary>
-  
+        public SentencePieceInputFormat? InputFormat { get; set; }
+        /// <summary>
+        /// Maximum size of sentences the trainer loads
