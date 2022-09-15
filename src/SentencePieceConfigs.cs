@@ -110,4 +110,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Comma separated list of input sentences )  type: string 
         /// </summary>
-        public string input {
+        public string input { get; set; }
+        /// <summary>
+        /// Input format. Supported format is 'text' or 'tsv'. ( default: 'text' )
+        /// </summary>
+  
