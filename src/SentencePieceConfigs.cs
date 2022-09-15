@@ -106,4 +106,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// If set to false, --vocab_size is considered as a soft limit. ( default: true )
         /// </summary>
-        public bool? HardVocabLimit { get; set; 
+        public bool? HardVocabLimit { get; set; }
+        /// <summary>
+        /// Comma separated list of input sentences )  type: string 
+        /// </summary>
+        public string input {
