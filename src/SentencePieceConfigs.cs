@@ -100,4 +100,8 @@ namespace Microsoft.MT.Common.Tokenization
         public string ControlSymbols { get; set; }
         /// <summary>
         /// Override EOS ((&lt;/s&gt;)) id. Set -1 to disable EOS. ( default: 0 )
-        /// @BUGBUG: BosId, eosId and UnkId should not be user-specifyable, as t
+        /// @BUGBUG: BosId, eosId and UnkId should not be user-specifyable, as they are controlled by Flo
+        /// </summary>
+        public Int32 EosId { get; set; } = 0;
+        /// <summary>
+        /// If set to false,
