@@ -116,4 +116,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public SentencePieceInputFormat? InputFormat { get; set; }
         /// <summary>
-        /// Maximum size of sentences the trainer loads
+        /// Maximum size of sentences the trainer loads ( default: 10000000 )
+        /// </summary>
+        public Int32? InputSentenceSize { get; set; }
+        /// <summary>
+        /// Maximum length of sen
