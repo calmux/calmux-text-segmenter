@@ -120,4 +120,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? InputSentenceSize { get; set; }
         /// <summary>
-        /// Maximum length of sen
+        /// Maximum length of sentence in bytes ( default: 2048)
+        /// </summary>
+        public Int32? MaxSentenceLength { get; set; }
+        /// <summary>
+        /// Maximum
