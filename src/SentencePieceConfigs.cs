@@ -124,4 +124,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? MaxSentenceLength { get; set; }
         /// <summary>
-        /// Maximum
+        /// Maximum length of sentence piece ( default: 16 )
+        /// </summary>
+        public Int32? MaxSentencepieceLength { get; set; }
+        /// <summar
