@@ -127,4 +127,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// Maximum length of sentence piece ( default: 16 )
         /// </summary>
         public Int32? MaxSentencepieceLength { get; set; }
-        /// <summar
+        /// <summary>
+        /// Maximum size of sentences to make seed sentence piece ( default: 2000000 )
+        /// </summary>
+        public Int32? MiningSente
