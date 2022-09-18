@@ -130,4 +130,9 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Maximum size of sentences to make seed sentence piece ( default: 2000000 )
         /// </summary>
-        public Int32? MiningSente
+        public Int32? MiningSentenceSize { get; set; }
+        /// <summary>
+        /// Output model prefix
+        /// </summary>
+        public string ModelPrefix { get; set; }
+       
