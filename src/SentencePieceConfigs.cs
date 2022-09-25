@@ -135,4 +135,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// Output model prefix
         /// </summary>
         public string ModelPrefix { get; set; }
-       
+        /// <summary>
+        /// Model algorithm: unigram, bpe, word or char ( default: unigram )
+        /// </summary>
+        public SentencePieceModelType? Mod
