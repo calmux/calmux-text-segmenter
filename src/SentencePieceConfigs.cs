@@ -138,4 +138,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Model algorithm: unigram, bpe, word or char ( default: unigram )
         /// </summary>
-        public SentencePieceModelType? Mod
+        public SentencePieceModelType? ModelType { get; set; }
+        /// <summary>
+        /// Normalization rule name. Choose from nfkc or identity ( default: nmt_nfkc )
+        /// </summary>
+        public Sentenc
