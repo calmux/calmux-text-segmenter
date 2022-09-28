@@ -142,4 +142,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Normalization rule name. Choose from nfkc or identity ( default: nmt_nfkc )
         /// </summary>
-        public Sentenc
+        public SentencePieceNormalizationRuleName? NormalizationRuleName { get; set; }
+        /// <summary>
+        /// Normalization rule TSV file. 
+        /// </s
