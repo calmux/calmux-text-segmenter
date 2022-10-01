@@ -145,4 +145,7 @@ namespace Microsoft.MT.Common.Tokenization
         public SentencePieceNormalizationRuleName? NormalizationRuleName { get; set; }
         /// <summary>
         /// Normalization rule TSV file. 
-        /// </s
+        /// </summary>
+        public string NormalizationRuleTsv { get; set; }
+        /// <summary>
+        /// Number of EM sub-iterations ( defaul
