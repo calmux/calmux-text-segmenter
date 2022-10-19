@@ -148,4 +148,9 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string NormalizationRuleTsv { get; set; }
         /// <summary>
-        /// Number of EM sub-iterations ( defaul
+        /// Number of EM sub-iterations ( default: 2 )
+        /// </summary>
+        public Int32? NumSubIterations { get; set; }
+        /// <summary>
+        /// Number of threads for training ( default: 16 )
+        /// </s
