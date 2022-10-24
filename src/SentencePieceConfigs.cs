@@ -156,4 +156,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? NumThreads { get; set; }
         /// <summary>
-        /// Override PAD (&lt;pad&gt;) id. Set -
+        /// Override PAD (&lt;pad&gt;) id. Set -1 to disable PAD. ( default: -1 )
+        /// </summary>
+        public Int32? PadId { get; set; }
+        /// <summary>
+    
