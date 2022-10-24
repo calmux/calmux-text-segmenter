@@ -153,4 +153,7 @@ namespace Microsoft.MT.Common.Tokenization
         public Int32? NumSubIterations { get; set; }
         /// <summary>
         /// Number of threads for training ( default: 16 )
-        /// </s
+        /// </summary>
+        public Int32? NumThreads { get; set; }
+        /// <summary>
+        /// Override PAD (&lt;pad&gt;) id. Set -
