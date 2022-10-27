@@ -176,4 +176,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public double? ShrinkingFactor { get; set; }
         /// <summary>
-        /// Use Unicode script to
+        /// Use Unicode script to split sentence pieces ( default: true )
+        /// </summary>
+        public bool? SplitByUnicodeScript { get; set; }
+        ///
