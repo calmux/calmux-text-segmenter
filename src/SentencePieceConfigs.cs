@@ -179,4 +179,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// Use Unicode script to split sentence pieces ( default: true )
         /// </summary>
         public bool? SplitByUnicodeScript { get; set; }
-        ///
+        /// <summary>
+        /// Use a white space to split sentence pieces ( default: true )
+        /// </summary>
+        public bool? SplitByWhites
