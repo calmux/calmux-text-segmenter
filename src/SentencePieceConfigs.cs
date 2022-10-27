@@ -162,4 +162,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Removes leading, trailing, and duplicate internal whitespace ( default: true )
         /// </summary>
-        public bool? RemoveExtraWhitespaces 
+        public bool? RemoveExtraWhitespaces { get; set; }
+        /// <summary>
+        /// The size of seed sentencepieces ( default: 1000000 )
+        /// </summary>
+        pub
