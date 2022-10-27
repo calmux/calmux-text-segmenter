@@ -166,4 +166,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// The size of seed sentencepieces ( default: 1000000 )
         /// </summary>
-        pub
+        public Int32? SeedSentencepieceSize { get; set; }
+        /// <summary>
+        /// The size of self test samples ( default: 0 )
+        /// </summary>
+ 
