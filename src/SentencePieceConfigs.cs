@@ -186,4 +186,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Maximum size of sentences to train sentence pieces ( default: 10000000 )
         /// </summary>
-        public overri
+        public override Int32? TrainingSentenceSize { get; set; }
+        /// <summary>
+        /// Override UNK (&lt;unk&gt;) id. ( default: 1 )
+        /// </summary>
+     
