@@ -160,4 +160,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? PadId { get; set; }
         /// <summary>
-    
+        /// Removes leading, trailing, and duplicate internal whitespace ( default: true )
+        /// </summary>
+        public bool? RemoveExtraWhitespaces 
