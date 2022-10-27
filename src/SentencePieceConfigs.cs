@@ -170,4 +170,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// The size of self test samples ( default: 0 )
         /// </summary>
- 
+        public Int32? SelfTestSampleSize { get; set; }
+        /// <summary>
+        /// Keeps top shrinking_factor pieces with respect to the loss ( default:
