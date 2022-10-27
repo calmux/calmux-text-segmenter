@@ -182,4 +182,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Use a white space to split sentence pieces ( default: true )
         /// </summary>
-        public bool? SplitByWhites
+        public bool? SplitByWhitespace { get; set; }
+        /// <summary>
+        /// Maximum size of sentences to train sentence pieces ( default: 10000000 )
+        /// </summary>
+        public overri
