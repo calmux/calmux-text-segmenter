@@ -172,4 +172,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? SelfTestSampleSize { get; set; }
         /// <summary>
-        /// Keeps top shrinking_factor pieces with respect to the loss ( default:
+        /// Keeps top shrinking_factor pieces with respect to the loss ( default: 0.75 )
+        /// </summary>
+        public double? ShrinkingFactor { get; set; }
+        /// <summary>
+        /// Use Unicode script to
