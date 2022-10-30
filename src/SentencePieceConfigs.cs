@@ -190,4 +190,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Override UNK (&lt;unk&gt;) id. ( default: 1 )
         /// </summary>
-     
+        public Int32 UnkId { get; set; } = 1;
+        /// <summary>
+        /// Dummy surface string for &lt;unk&gt;. In decoding &lt;unk&gt; is decoded to `unk_surfa
