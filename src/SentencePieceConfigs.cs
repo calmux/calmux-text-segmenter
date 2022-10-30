@@ -192,4 +192,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32 UnkId { get; set; } = 1;
         /// <summary>
-        /// Dummy surface string for &lt;unk&gt;. In decoding &lt;unk&gt; is decoded to `unk_surfa
+        /// Dummy surface string for &lt;unk&gt;. In decoding &lt;unk&gt; is decoded to `unk_surface`.
+        /// @BUGBUG: BosId, eosId and UnkId should not be user-specifyable, as they are controlled by Flo
+        /// </summary>
+        public stri
