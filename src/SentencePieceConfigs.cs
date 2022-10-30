@@ -202,4 +202,7 @@ namespace Microsoft.MT.Common.Tokenization
         public bool? UseAllVocab { get; set; }
         /// <summary>
         /// Comma separated list of user defined symbols
-        
+        /// </summary>
+        public string UserDefinedSymbols { get; set; }
+        /// <summary>
+        /// Vocabulary size ( default: 32000
