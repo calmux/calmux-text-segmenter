@@ -195,4 +195,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// Dummy surface string for &lt;unk&gt;. In decoding &lt;unk&gt; is decoded to `unk_surface`.
         /// @BUGBUG: BosId, eosId and UnkId should not be user-specifyable, as they are controlled by Flo
         /// </summary>
-        public stri
+        public string UnkSurface { get; set; }
+        /// <summary>
+        /// If set to true, use all tokens as vocab.Valid for word/char models. ( default: false )
+   
