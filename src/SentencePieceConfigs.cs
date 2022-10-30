@@ -198,4 +198,8 @@ namespace Microsoft.MT.Common.Tokenization
         public string UnkSurface { get; set; }
         /// <summary>
         /// If set to true, use all tokens as vocab.Valid for word/char models. ( default: false )
-   
+        /// </summary>
+        public bool? UseAllVocab { get; set; }
+        /// <summary>
+        /// Comma separated list of user defined symbols
+        
