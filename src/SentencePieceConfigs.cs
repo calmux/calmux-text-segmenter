@@ -205,4 +205,10 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string UserDefinedSymbols { get; set; }
         /// <summary>
-        /// Vocabulary size ( default: 32000
+        /// Vocabulary size ( default: 32000 )
+        /// </summary>
+        public int? VocabSize { get; set; } = 32000;
+    }
+
+    /// <summary>
+    /// Class to hold all parameters f
