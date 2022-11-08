@@ -214,4 +214,8 @@ namespace Microsoft.MT.Common.Tokenization
     /// Class to hold all parameters for the SentencePiece encoding tool.
     /// </summary>
     public class SentencePieceEncodeConfig : SegmenterEncodeConfigBase, ISentencePieceConfig
-  
+    {
+        /// <summary>
+        /// Smoothing parameter for sampling mode ( default: 0.5 )
+        /// </summary>
+        public double? Alp
