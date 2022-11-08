@@ -218,4 +218,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// Smoothing parameter for sampling mode ( default: 0.5 )
         /// </summary>
-        public double? Alp
+        public double? Alpha { get; set; }
+        /// <summary>
+        /// ':' separated encoder extra options, e.g., "reverse:bos:eos"
+        /// </summary>
+        publ
