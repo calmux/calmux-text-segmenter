@@ -222,4 +222,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// ':' separated encoder extra options, e.g., "reverse:bos:eos"
         /// </summary>
-        publ
+        public string ExtraOptions { get; set; }
+        /// <summary>
+        /// Generates vocabulary file instead of segmentation ( defau
