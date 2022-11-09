@@ -224,4 +224,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string ExtraOptions { get; set; }
         /// <summary>
-        /// Generates vocabulary file instead of segmentation ( defau
+        /// Generates vocabulary file instead of segmentation ( default: false )
+        /// Internal use only; cannot be specified by Flo user.
+        /// </summary>
+        public bool? GenerateVocabulary { get; set; }
+   
