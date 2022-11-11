@@ -228,4 +228,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// Internal use only; cannot be specified by Flo user.
         /// </summary>
         public bool? GenerateVocabulary { get; set; }
-   
+        /// <summary>
+        /// NBest size ( default: 10 ). Only used if OutputFormat is nbest_XXX.
+        /// </summary>
