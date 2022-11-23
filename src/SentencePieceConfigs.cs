@@ -231,3 +231,6 @@ namespace Microsoft.MT.Common.Tokenization
         /// <summary>
         /// NBest size ( default: 10 ). Only used if OutputFormat is nbest_XXX.
         /// </summary>
+        public Int32? NBest_Size { get; set; }
+        /// <summary>
+        /// choose from piece, id, proto, nbest_piece, nbest_i
