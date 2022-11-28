@@ -233,4 +233,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public Int32? NBest_Size { get; set; }
         /// <summary>
-        /// choose from piece, id, proto, nbest_piece, nbest_i
+        /// choose from piece, id, proto, nbest_piece, nbest_id, or nbest_proto ( default: piece) 
+        /// Internal use only; cannot be specified by Flo user.
+        /// </summary>
+        public Sentence
