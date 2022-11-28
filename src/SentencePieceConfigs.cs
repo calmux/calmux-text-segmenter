@@ -238,4 +238,8 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public SentencePieceEncodeFormat? OutputFormat { get; set; }
         /// <summary>
-        /// Restrict the vocabulary. The encoder only emits the t
+        /// Restrict the vocabulary. The encoder only emits the tokens in "vocabulary" file
+        /// </summary>
+        public string Vocabulary { get; set; }
+        /// <summary>
+        /// Words with frequency below thres
