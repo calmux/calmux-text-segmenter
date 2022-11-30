@@ -242,4 +242,9 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string Vocabulary { get; set; }
         /// <summary>
-        /// Words with frequency below thres
+        /// Words with frequency below threshold will be treated as OOV ( default: 0 )
+        /// </summary>
+        public Int32? VocabularyThreshold { get; set; }
+    }
+
+    
