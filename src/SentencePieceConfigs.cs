@@ -247,4 +247,7 @@ namespace Microsoft.MT.Common.Tokenization
         public Int32? VocabularyThreshold { get; set; }
     }
 
-    
+    /// <summary>
+    /// Class to hold all parameters for the SentencePiece decoding tool.
+    /// </summary>
+    public class SentencePieceDecod
