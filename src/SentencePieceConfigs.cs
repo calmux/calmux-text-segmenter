@@ -250,4 +250,7 @@ namespace Microsoft.MT.Common.Tokenization
     /// <summary>
     /// Class to hold all parameters for the SentencePiece decoding tool.
     /// </summary>
-    public class SentencePieceDecod
+    public class SentencePieceDecodeConfig : SegmenterDecodeConfigBase, ISentencePieceConfig
+    {
+        /// <summary>
+        /// ':' separated encoder extra options, e.
