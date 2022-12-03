@@ -253,4 +253,8 @@ namespace Microsoft.MT.Common.Tokenization
     public class SentencePieceDecodeConfig : SegmenterDecodeConfigBase, ISentencePieceConfig
     {
         /// <summary>
-        /// ':' separated encoder extra options, e.
+        /// ':' separated encoder extra options, e.g., "reverse:bos:eos"
+        /// </summary>
+        public string ExtraOptions { get; set; }
+        /// <summary>
+        /// choos
