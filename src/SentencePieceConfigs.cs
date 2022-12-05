@@ -260,4 +260,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// choose from piece, id. Default: piece
         /// Internal use only; cannot be specified by Flo user.
         /// </summary>
-        public SentencePieceDecodeInputF
+        public SentencePieceDecodeInputFormat? InputFormat { get; set; }
+        /// <summary>
+        /// choose from string or proto. Default: string
+        /// Internal use on
