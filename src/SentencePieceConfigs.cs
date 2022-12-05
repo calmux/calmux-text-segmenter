@@ -257,4 +257,7 @@ namespace Microsoft.MT.Common.Tokenization
         /// </summary>
         public string ExtraOptions { get; set; }
         /// <summary>
-        /// choos
+        /// choose from piece, id. Default: piece
+        /// Internal use only; cannot be specified by Flo user.
+        /// </summary>
+        public SentencePieceDecodeInputF
