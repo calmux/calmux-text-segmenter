@@ -1,0 +1,1 @@
+# Calmux Text Segmenter\n\nCalumax Text Segmenter is diligently designed to revamp your machine translation using the unsupervised text tokenization technique. O
