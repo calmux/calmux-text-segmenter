@@ -2,4 +2,4 @@
 sudo apt-get install dotnet-sdk-3.1
 sudo apt-get install dotnet-runtime-3.1
 ```
-And install SentencePiece from source. The text segmenter includes integration with both C# and a Linux command-line tool for maximum flexibity.\n\n### How to Contribute?\nWe wholehe
+And install SentencePiece from source. The text segmenter includes integration with both C# and a Linux command-line tool for maximum flexibity.\n\n### How to Contribute?\nWe wholeheartedly welcome contributions and suggestions. But prior to making contributions, you need to agree to a Contributor License Agreement (CLA), thu
